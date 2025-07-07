@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier
+_commit: v0.2.0
+_src_path: gh:alan-turing-institute/python-project-template
+coc: their_coc
+email: syonis@turing.ac.uk
+full_name: Saad
+license: MIT
+min_python_version: '3.12'
+org: alan-turing-institute
+project_name: comparative-gsa
+project_short_description: Comparing different emulators for GSA.
+python_name: comparative_gsa
+typing: no_typing
+url: https://github.com/alan-turing-institute/comparative-gsa
