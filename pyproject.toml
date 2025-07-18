@@ -19,6 +19,7 @@ dependencies = [
     "numpy",
     "ModularCirc",
     "pytest",
+    "autoemulate"
 ]
 
 [project.optional-dependencies]
