@@ -159,3 +159,6 @@ Thumbs.db
 
 # Custom
 sandbox/outputs/
+
+# VSCode settings
+.vscode/
