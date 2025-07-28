@@ -1,16 +1,8 @@
 # comparative-gsa
 
-[![Actions Status][actions-badge]][actions-link]
-[![PyPI version][pypi-version]][pypi-link]
-[![PyPI platforms][pypi-platforms]][pypi-link]
-
 Comparing different emulators for GSA.
 
 ## Installation
-
-```bash
-python -m pip install comparative_gsa
-```
 
 From source:
 ```bash
