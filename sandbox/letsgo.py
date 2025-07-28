@@ -38,7 +38,7 @@ parameters_range
 N_samples = 60
 lhd = LatinHypercube(parameters_range.values())
 sample_array = lhd.sample(N_samples)
-sample_df    = pd.DataFrame(sample_array, columns=parameters_range.keys())  
+sample_df    = pd.DataFrame(sample_array, columns=parameters_range.keys())
 print("Number of parameters", sample_df.shape[1], "Number of samples from each parameter", sample_df.shape[0])
 sample_df.head()
 # enforce parameter relations (eg td <= T)
@@ -58,8 +58,8 @@ def simulate(param_dict):
 Y = []
 # Iterate over each sample of parameters
 for index, row in tqdm(sample_df.iterrows(), total=len(sample_df), disable=show_progress):
-    param_dict = row.to_dict() 
-    fp, t, y = simulate(param_dict) 
+    param_dict = row.to_dict()
+    fp, t, y = simulate(param_dict)
     # extract peak pressure
     peak_pressure = y[:ncomp, :].max()
     Y.append(peak_pressure)
