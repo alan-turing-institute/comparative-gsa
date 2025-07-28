@@ -4,6 +4,8 @@ This repository houses the code for comparing global sensitivity analysis (GSA) 
 
 The goal is to, for the first time, systematically characterise differences in GSA results based on the choice of using the simulators or emulators under various conditions.
 
+The project is part of the [CVD-Net research programme](www.cvd-net.com), run in collaboration between The Alan Turing Institute, Imperial College London, University of Sheffield and University of Nottingham.
+
 ## Installation
 
 From source:
