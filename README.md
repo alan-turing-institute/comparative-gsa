@@ -1,6 +1,8 @@
 # comparative-gsa
 
-Comparing different emulators for GSA.
+This repository houses the code for comparing global sensitivity analysis (GSA) performed on direct simulations obtained from running physics-based cardiovascular models versus on outputs of emulators trained on the direct simulations.
+
+The goal is to, for the first time, systematically characterise differences in GSA results based on the choice of using the simulators or emulators under various conditions.
 
 ## Installation
 
