@@ -1,15 +1,5 @@
 # Import relevant libraries
 import os
-from ModularCirc import BatchRunner
-import numpy as np
-import pandas as pd
-from ModularCirc.Models.NaghaviModel import NaghaviModel, NaghaviModelParameters, TEMPLATE_TIME_SETUP_DICT
-from SALib.analyze.sobol import analyze
-from SALib.sample.sobol import sample as sobol_sample
-from SALib.analyze.sobol import analyze as sobol_analyze
-import matplotlib.pyplot as plt
-from autoemulate.compare import AutoEmulate
-from SALib.analyze.sobol import analyze
 import numpy as np
 import json
 
