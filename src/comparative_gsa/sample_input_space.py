@@ -20,12 +20,10 @@ def sample_input_space(param_path,
     param_filename = os.path.splitext(os.path.basename(param_path))[0]
 
     # Define the location for saving simulation outputs
-    simulation_out_path = f'outputs/simulations/output_{n_samples}_samples_{param_filename}/'
 
-    # Create the directory for saving simulations
-    os.makedirs(os.path.join(simulation_out_path,
-                            f'raw_simulations_{n_samples}_samples'),
-                            exist_ok=True)
+    # Get the root directory of the project
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    simulation_out_path = os.path.join(root_dir, f'outputs/simulations/output_{n_samples}_samples_{param_filename}/')
 
     ## read in save parameters to the folder where simulations r saved.
     with open(param_path, 'r') as f:
@@ -69,4 +67,4 @@ def sample_input_space(param_path,
     br.setup_model(model=NaghaviModel, po=NaghaviModelParameters,
                     time_setup=TEMPLATE_TIME_SETUP_DICT)
 
-    return br
+    return br, simulation_out_path

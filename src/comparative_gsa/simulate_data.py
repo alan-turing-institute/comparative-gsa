@@ -13,7 +13,9 @@ from SALib.analyze.sobol import analyze
 import numpy as np
 import json
 
-def simulate_data(batch_runner, simulation_out_path, n_jobs=8):
+def simulate_data(batch_runner,
+                  simulation_out_path,
+                  n_jobs=8):
     """
     Runs a batch of simulations using the provided BatchRunner instance and saves the results.
 
@@ -34,6 +36,11 @@ def simulate_data(batch_runner, simulation_out_path, n_jobs=8):
 
     # Get the number of samples from the batch runner
     n_samples = batch_runner._samples.shape[0]
+
+    # Create the directory for saving simulations
+    os.makedirs(os.path.join(simulation_out_path,
+                            f'raw_simulations_{n_samples}_samples'),
+                            exist_ok=True)
 
     print(f"Running batch simulation with {n_samples} samples...")
     simulations = batch_runner.run_batch(
