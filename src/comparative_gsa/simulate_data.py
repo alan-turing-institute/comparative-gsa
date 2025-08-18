@@ -5,7 +5,7 @@ import json
 
 def simulate_data(batch_runner,
                   simulation_out_path,
-                  n_jobs=8):
+                  n_jobs=10):
     """
     Runs a batch of simulations using the provided BatchRunner instance and saves the results.
 
