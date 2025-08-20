@@ -28,7 +28,8 @@ def calculate_output_features(simulations,
         row = {} ##the 'dictiionary' to hold the summary for each simulation
         for h in sim_df.columns: # We had sim_df the whole time which means h can be used without the headers list!
             row[f"{h}_mean"] = sim_df[h].mean()
-            row[f"{h}_max"] = sim_df[h].max() ## using the headers defined above to make the new csv file headers eg v_ao_mean, v_ao_max, etc.
+            row[f"{h}_max"] = sim_df[h].max()
+            row[f"{h}_min"] = sim_df[h].min() ## using the headers defined above to make the new csv file headers eg v_ao_mean, v_ao_max, etc.
         summary_rows.append(row) # this is a list that is being used to collect summary data for our simulations.
 
     # Create a DataFrame from the summary rows and save it to a CSV file
