@@ -57,7 +57,6 @@ def sample_input_space(param_path,
     # Map the vessel volumes
     br.map_vessel_volume()
 
-
     # Save the samples to a CSV file
     br.samples.to_csv(os.path.join(simulation_out_path,
                                    f'input_samples_{n_samples}.csv'),
