@@ -71,3 +71,19 @@ def ae_load_model(path: str | Path):
     except Exception as e:
         logger.error("Failed to load model from %s: %s", path, e)
         raise
+
+def swap_s1_st(sobol_df):
+
+    # Due to a bug in autoemulate plotting, we must swap ST and S1 rows.
+
+    # Get the indices of rows where index == 'ST'
+    mask_st = sobol_df['index'] == 'ST'
+    mask_s1 = sobol_df['index'] == 'S1'
+
+    # For those rows, change the index to be 'S1'
+    sobol_df.loc[mask_st, 'index'] = 'S1'
+
+    # For those rows, change the index to be 'ST'
+    sobol_df.loc[mask_s1, 'index'] = 'ST'
+
+    return sobol_df
