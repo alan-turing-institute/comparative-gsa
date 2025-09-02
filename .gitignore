@@ -161,6 +161,7 @@ Thumbs.db
 sandbox/outputs/
 /outputs/simulations/
 /outputs/simulations_for_sa/
+/outputs/sa_results/
 
 # VSCode settings
 .vscode/
