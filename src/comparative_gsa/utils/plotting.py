@@ -48,7 +48,7 @@ def plot_sa_heatmap(
 
         if fname is None:
             return display_figure(fig)
-        fig.savefig(fname, bbox_inches="tight")
+        fig.savefig(fname, dpi=300, bbox_inches="tight")
         return None
 
 def _plot_sa_heatmap(
